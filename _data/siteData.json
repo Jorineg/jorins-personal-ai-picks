@@ -126,7 +126,8 @@
                     "company_id": "company_openai",
                     "service_link": "https://chat.openai.com/",
                     "cheapest_option": "Free",
-                    "api_available": true
+                    "api_available": true,
+                    "description": "This model is super great at following instructions and rendering text in images. You use it by simply asking ChatGPT to generate an image based on a text prompt."
                 },
                 {
                     "rank": 2,
