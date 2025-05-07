@@ -4,67 +4,67 @@
         {
             "id": "company_google",
             "name": "Google",
-            "logoUrl": ""
+            "logoUrl": "assets/google.png"
         },
         {
             "id": "company_openai",
             "name": "OpenAI",
-            "logoUrl": ""
+            "logoUrl": "assets/openai.png"
         },
         {
             "id": "company_xai",
             "name": "xAI",
-            "logoUrl": ""
+            "logoUrl": "assets/xai.png"
         },
         {
             "id": "company_anthropic",
             "name": "Anthropic",
-            "logoUrl": ""
+            "logoUrl": "assets/anthropic.png"
         },
         {
             "id": "company_ideogram_ai",
             "name": "Ideogram AI",
-            "logoUrl": ""
+            "logoUrl": "assets/ideogram.png"
         },
         {
             "id": "company_recraft_ai",
             "name": "Recraft AI",
-            "logoUrl": ""
+            "logoUrl": "assets/recraft.png"
         },
         {
             "id": "company_kuaishou",
             "name": "Kuaishou",
-            "logoUrl": ""
+            "logoUrl": "assets/kuaishou.png"
         },
         {
             "id": "company_runwayml",
             "name": "RunwayML",
-            "logoUrl": ""
+            "logoUrl": "assets/runway.png"
         },
         {
             "id": "company_suno_ai",
             "name": "Suno AI Inc.",
-            "logoUrl": ""
+            "logoUrl": "assets/suno.png"
         },
         {
             "id": "company_udio",
             "name": "Udio",
-            "logoUrl": ""
+            "logoUrl": "assets/udio.png"
         },
         {
             "id": "company_elevenlabs",
             "name": "ElevenLabs",
-            "logoUrl": ""
+            "logoUrl": "assets/elevenlabs.svg"
         },
         {
             "id": "company_assemblyai",
             "name": "AssemblyAI",
-            "logoUrl": ""
+            "logoUrl": "assets/assemblyai.png"
         },
         {
             "id": "company_minimax",
             "name": "Minimax",
-            "logoUrl": ""
+            "logoUrl": "assets/minimax.png"
         }
     ],
     "categories": [
