@@ -1,0 +1,290 @@
+{
+    "lastUpdated": "2025-05-07",
+    "companies": [
+        {
+            "id": "company_google",
+            "name": "Google",
+            "logoUrl": ""
+        },
+        {
+            "id": "company_openai",
+            "name": "OpenAI",
+            "logoUrl": ""
+        },
+        {
+            "id": "company_xai",
+            "name": "xAI",
+            "logoUrl": ""
+        },
+        {
+            "id": "company_anthropic",
+            "name": "Anthropic",
+            "logoUrl": ""
+        },
+        {
+            "id": "company_ideogram_ai",
+            "name": "Ideogram AI",
+            "logoUrl": ""
+        },
+        {
+            "id": "company_recraft_ai",
+            "name": "Recraft AI",
+            "logoUrl": ""
+        },
+        {
+            "id": "company_kuaishou",
+            "name": "Kuaishou",
+            "logoUrl": ""
+        },
+        {
+            "id": "company_runwayml",
+            "name": "RunwayML",
+            "logoUrl": ""
+        },
+        {
+            "id": "company_suno_ai",
+            "name": "Suno AI Inc.",
+            "logoUrl": ""
+        },
+        {
+            "id": "company_udio",
+            "name": "Udio",
+            "logoUrl": ""
+        },
+        {
+            "id": "company_elevenlabs",
+            "name": "ElevenLabs",
+            "logoUrl": ""
+        },
+        {
+            "id": "company_assemblyai",
+            "name": "AssemblyAI",
+            "logoUrl": ""
+        },
+        {
+            "id": "company_minimax",
+            "name": "Minimax",
+            "logoUrl": ""
+        }
+    ],
+    "categories": [
+        {
+            "name": "AI Chat Models",
+            "slug": "ai-chat-models",
+            "description": "Engage in conversations, get answers, and generate text with these leading AI chat models.",
+            "models": [
+                {
+                    "rank": 1,
+                    "model_name": "Gemini 2.5 Pro",
+                    "company_id": "company_google",
+                    "service_link": "https://aistudio.google.com/",
+                    "cheapest_option": "Free",
+                    "api_available": true
+                },
+                {
+                    "rank": 2,
+                    "model_name": "OpenAI o3",
+                    "company_id": "company_openai",
+                    "service_link": "https://chat.openai.com/",
+                    "cheapest_option": "20$/Monat",
+                    "api_available": true
+                },
+                {
+                    "rank": 3,
+                    "model_name": "Grok 3",
+                    "company_id": "company_xai",
+                    "service_link": "https://grok.com",
+                    "cheapest_option": "30$/Monat",
+                    "api_available": true
+                },
+                {
+                    "rank": 4,
+                    "model_name": "Claude 3.7 Sonnet",
+                    "company_id": "company_anthropic",
+                    "service_link": "https://claude.ai/",
+                    "cheapest_option": "Free",
+                    "api_available": true
+                },
+                {
+                    "rank": 5,
+                    "model_name": "GPT-4o",
+                    "company_id": "company_openai",
+                    "service_link": "https://chat.openai.com/",
+                    "cheapest_option": "Free",
+                    "api_available": true
+                }
+            ]
+        },
+        {
+            "name": "Image Generation",
+            "slug": "image-generation",
+            "description": "Create stunning visuals from text prompts using these powerful AI image generators.",
+            "models": [
+                {
+                    "rank": 1,
+                    "model_name": "ChatGPT Image Model",
+                    "company_id": "company_openai",
+                    "service_link": "https://chat.openai.com/",
+                    "cheapest_option": "Free",
+                    "api_available": true
+                },
+                {
+                    "rank": 2,
+                    "model_name": "Google Imagen 3",
+                    "company_id": "company_google",
+                    "service_link": "https://imagefx.google.com/",
+                    "cheapest_option": "$0.03/Einheit",
+                    "api_available": true
+                },
+                {
+                    "rank": 3,
+                    "model_name": "Ideogram 3",
+                    "company_id": "company_ideogram_ai",
+                    "service_link": "https://ideogram.ai/",
+                    "cheapest_option": "Free",
+                    "api_available": true
+                },
+                {
+                    "rank": 4,
+                    "model_name": "Recraft v3",
+                    "company_id": "company_recraft_ai",
+                    "service_link": "https://www.recraft.ai/",
+                    "cheapest_option": "Free",
+                    "api_available": true
+                }
+            ]
+        },
+        {
+            "name": "Video Generation",
+            "slug": "video-generation",
+            "description": "Generate videos from text prompts or images.",
+            "models": [
+                {
+                    "rank": 1,
+                    "model_name": "Google Veo 2",
+                    "company_id": "company_google",
+                    "service_link": "https://labs.google/videofx",
+                    "cheapest_option": "Free",
+                    "api_available": true
+                },
+                {
+                    "rank": 2,
+                    "model_name": "Kling 2.0",
+                    "company_id": "company_kuaishou",
+                    "service_link": "https://klingai.com",
+                    "cheapest_option": "Free",
+                    "api_available": true
+                },
+                {
+                    "rank": 3,
+                    "model_name": "Runway Gen 4",
+                    "company_id": "company_runwayml",
+                    "service_link": "https://runwayml.com/",
+                    "cheapest_option": "Free",
+                    "api_available": true
+                },
+                {
+                    "rank": 4,
+                    "model_name": "Sora",
+                    "company_id": "company_openai",
+                    "service_link": "https://chat.openai.com/",
+                    "cheapest_option": "20$/Monat",
+                    "api_available": false
+                }
+            ]
+        },
+        {
+            "name": "Music Generation",
+            "slug": "music-generation",
+            "description": "Create original music tracks with AI.",
+            "models": [
+                {
+                    "rank": 1,
+                    "model_name": "Suno",
+                    "company_id": "company_suno_ai",
+                    "service_link": "https://suno.com/",
+                    "cheapest_option": "Free",
+                    "api_available": false
+                },
+                {
+                    "rank": 2,
+                    "model_name": "Udio",
+                    "company_id": "company_udio",
+                    "service_link": "https://www.udio.com/",
+                    "cheapest_option": "Free",
+                    "api_available": true
+                }
+            ]
+        },
+        {
+            "name": "Audio Transcription",
+            "slug": "audio-transcription",
+            "description": "Transcribe audio content into text.",
+            "models": [
+                {
+                    "rank": 1,
+                    "model_name": "Gemini 2.5 Flash",
+                    "company_id": "company_google",
+                    "service_link": "https://aistudio.google.com/",
+                    "cheapest_option": "Free",
+                    "api_available": true
+                },
+                {
+                    "rank": 2,
+                    "model_name": "ElevenLabs Scribe",
+                    "company_id": "company_elevenlabs",
+                    "service_link": "https://elevenlabs.io/speech-to-text",
+                    "cheapest_option": "Free",
+                    "api_available": true
+                },
+                {
+                    "rank": 3,
+                    "model_name": "Universal-2",
+                    "company_id": "company_assemblyai",
+                    "service_link": "https://www.assemblyai.com/universal-2",
+                    "cheapest_option": "Free",
+                    "api_available": true
+                }
+            ]
+        },
+        {
+            "name": "Text to Speech",
+            "slug": "text-to-speech",
+            "description": "Convert text into natural-sounding speech.",
+            "models": [
+                {
+                    "rank": 1,
+                    "model_name": "ElevenLabs Multilingual v2",
+                    "company_id": "company_elevenlabs",
+                    "service_link": "https://elevenlabs.io/",
+                    "cheapest_option": "Free",
+                    "api_available": true
+                },
+                {
+                    "rank": 2,
+                    "model_name": "OpenAI tts-1-hd",
+                    "company_id": "company_openai",
+                    "service_link": "",
+                    "cheapest_option": "$30.00/1M Zeichen",
+                    "api_available": true
+                },
+                {
+                    "rank": 3,
+                    "model_name": "Minimax Speech 02 HD",
+                    "company_id": "company_minimax",
+                    "service_link": "https://chat.minimax.io/",
+                    "cheapest_option": "Free",
+                    "api_available": true
+                },
+                {
+                    "rank": 4,
+                    "model_name": "OpenAI 4o-mini tts",
+                    "company_id": "company_openai",
+                    "service_link": "",
+                    "cheapest_option": "$0.60/1M Input-Token + $12.00/1M Output-Token",
+                    "api_available": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,115 @@
+---
+layout: base.njk
+---
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">AI Models Directory</h1>
+    <p class="site-description">A curated selection of the best AI tools across different categories</p>
+    <p class="last-updated">Last updated: {{ siteData.lastUpdated }}</p>
+  </div>
+</header>
+
+<main class="container">
+  <div class="tabs">
+    <div class="tabs-header" role="tablist">
+      {% for category in siteData.categories %}
+        <button 
+          class="tab-button {% if loop.first %}active{% endif %}" 
+          role="tab" 
+          aria-selected="{% if loop.first %}true{% else %}false{% endif %}" 
+          aria-controls="panel-{{ category.slug }}"
+          data-tab="{{ category.slug }}">
+          {{ category.name }}
+        </button>
+      {% endfor %}
+    </div>
+    
+    <div class="tabs-content">
+      {% for category in siteData.categories %}
+        <div 
+          id="panel-{{ category.slug }}" 
+          class="tab-panel {% if loop.first %}active{% endif %}" 
+          role="tabpanel" 
+          aria-labelledby="tab-{{ category.slug }}">
+          
+          {% if category.description %}
+            <p class="category-description">{{ category.description }}</p>
+          {% endif %}
+          
+          <div class="models-grid">
+            {% for model in category.models %}
+              {% set company = {} %}
+              {% for comp in siteData.companies %}
+                {% if comp.id == model.company_id %}
+                  {% set company = comp %}
+                {% endif %}
+              {% endfor %}
+              
+              <div class="model-card rank-{{ model.rank }}">
+                <div class="model-header">
+                  <div class="rank-badge">
+                    {% if model.rank == 1 %}
+                      <span class="rank-icon rank-1">🥇</span>
+                    {% elif model.rank == 2 %}
+                      <span class="rank-icon rank-2">🥈</span>
+                    {% elif model.rank == 3 %}
+                      <span class="rank-icon rank-3">🥉</span>
+                    {% else %}
+                      <span class="rank-number">{{ model.rank }}</span>
+                    {% endif %}
+                  </div>
+                  <h3 class="model-name">{{ model.model_name }}</h3>
+                </div>
+                
+                <div class="company-info">
+                  {% if model.company_id and company.logoUrl %}
+                    <img 
+                      src="{{ company.logoUrl }}" 
+                      alt="{{ company.name }} logo" 
+                      class="company-logo"
+                    >
+                    <span class="company-name">{{ company.name }}</span>
+                  {% elif model.logo_url_override %}
+                    <img 
+                      src="{{ model.logo_url_override }}" 
+                      alt="{{ model.company_name_override }} logo" 
+                      class="company-logo"
+                    >
+                    <span class="company-name">{{ model.company_name_override }}</span>
+                  {% endif %}
+                </div>
+                
+                <div class="model-details">
+                  <div class="pricing">
+                    <span class="detail-icon">💰</span>
+                    <span class="detail-text">{{ model.cheapest_option }}</span>
+                  </div>
+                  
+                  <div class="api-available">
+                    <span class="detail-icon">🔌</span>
+                    <span class="detail-text">API: {{ 'Available' if model.api_available else 'Not available' }}</span>
+                  </div>
+                  
+                  <a href="{{ model.service_link }}" class="service-link" target="_blank" rel="noopener">
+                    Visit Service <span class="arrow">→</span>
+                  </a>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="disclaimer">
+      This directory represents personal recommendations and is not guaranteed to be complete or objective.
+      All company logos are property of their respective owners and are used for identification purposes only.
+    </p>
+    <p class="copyright">© {{ '' | date('YYYY') }} Jorin's AI Directory</p>
+  </div>
+</footer>
