@@ -2,68 +2,97 @@
 layout: base.njk
 ---
 
-<div class="hero">
-    <h1>Jorin's personal picks<br>for helpful AI tools</h1>
-</div>
+<main class="container">
+  <h1 class="site-title">Jorin's personal picks<br>for helpful AI tools</h1>
+  <p class="last-updated">Last updated: {{ siteData.lastUpdated }}</p>
 
-<div class="tabs">
+  <div class="tabs">
     {% for category in siteData.categories %}
-        <button class="tab-button" data-tab="{{ category.slug }}">{{ category.name }}</button>
+      <button 
+        class="tab-button" 
+        data-tab="{{ category.slug }}" 
+        {% if loop.first %}aria-selected="true"{% endif %}
+      >
+        {{ category.name }}
+      </button>
     {% endfor %}
-</div>
+  </div>
 
-<div class="tab-content">
-    {% for category in siteData.categories %}
-        <div class="tab-pane" id="{{ category.slug }}">
-            <div class="category-description">
-                <h2>{{ category.name }}</h2>
-                <p>{{ category.description }}</p>
+  {% for category in siteData.categories %}
+    <div 
+      class="tab-content" 
+      id="{{ category.slug }}" 
+      {% if not loop.first %}style="display: none;"{% endif %}
+    >
+      {% if category.description %}
+        <p class="category-description">{{ category.description }}</p>
+      {% endif %}
+      
+      <div class="models-list">
+        {% for model in category.models %}
+          {% set company = siteData.companies | getCompanyById(model.company_id) %}
+          <div class="model-card">
+            <div class="model-info">
+              <div class="logo-cluster">
+                <div class="model-logo">
+                  <img src="{{ company.logoUrl }}" alt="{{ company.name }} logo">
+                </div>
+                <p class="model-company">{{ company.name }}</p>
+              </div>
+              
+              <div class="model-details">
+                <h2 class="model-name">{{ model.model_name }}</h2>
+                {% if model.description %}
+                <p class="model-description">{{ model.description | safe }}</p>
+                {% endif %}
+                
+                <div class="model-actions">
+                  {% if model.service_link %}
+                  <a href="{{ model.service_link }}" target="_blank" class="try-button">
+                    Try {{ model.model_name }}
+                  </a>
+                  {% endif %}
+
+                  <div class="model-price">
+                    <div class="price-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="piggy-bank">
+                        <path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2V5z"/>
+                        <path d="M2 9v1c0 1.1.9 2 2 2h1"/>
+                        <path d="M16 11h0"/>
+                      </svg>
+                    </div>
+                    <span>{{ model.cheapest_option }}</span>
+                  </div>
+
+                  <p class="api-info {% if model.api_available %}api-available{% else %}api-unavailable{% endif %}">
+                    <span class="api-icon">{% if model.api_available %}✓{% else %}✗{% endif %}</span>
+                    <span class="api-text">{% if model.api_available %}API Available{% else %}No API Available{% endif %}</span>
+                  </p>
+                </div>
+              </div>
             </div>
             
-            <div class="models-grid">
-                {% for model in category.models %}
-                    {% set company = siteData.companies | getCompanyById(model.company_id) %}
-                    <div class="model-card">
-                        <div class="model-header">
-                            <div class="model-logo">
-                                <img src="{{ company.logoUrl }}" alt="{{ company.name }} logo">
-                            </div>
-                            <div class="model-title">
-                                <h3>{{ model.model_name }}</h3>
-                                <p class="company-name">{{ company.name }}</p>
-                            </div>
-                            <div class="model-rank rank-{{ model.rank }}">
-                                <span class="rank-number">{{ model.rank }}</span>
-                            </div>
-                        </div>
-                        
-                        <div class="model-body">
-                            <p class="model-description">{{ model.description }}</p>
-                            
-                            <div class="model-pricing">
-                                <div class="pricing-icon">
-                                    <svg class="piggy-bank" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19 5C19 3.9 18.1 3 17 3H7C5.9 3 5 3.9 5 5M19 5V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V5M19 5H5M7 8H17M7 12H17M7 16H13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                                <p class="pricing-text">Cheapest option: {{ model.cheapest_option }}</p>
-                            </div>
-                            
-                            <div class="model-api {% if model.api_available %}available{% else %}unavailable{% endif %}">
-                                <span class="api-label">API:</span>
-                                <span class="api-status">{{ 'Available' if model.api_available else 'Not Available' }}</span>
-                            </div>
-                            
-                            <a href="{{ model.service_link }}" class="model-link" target="_blank" rel="noopener noreferrer">
-                                Visit {{ company.name }}
-                                <svg class="external-link" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11M15 3H21M21 3V9M21 3L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    {% endfor %}
-</div>
+            {% if model.rank == 1 %}
+              <div class="rank-icon rank-1">
+                <img src="/assets/ribbons/first-icon.png" alt="Rank 1">
+              </div>
+            {% elif model.rank == 2 %}
+              <div class="rank-icon rank-2">
+                <img src="/assets/ribbons/second-icon.png" alt="Rank 2">
+              </div>
+            {% elif model.rank == 3 %}
+              <div class="rank-icon rank-3">
+                <img src="/assets/ribbons/third-icon.png" alt="Rank 3">
+              </div>
+            {% elif model.rank %}
+              <div class="rank-plain">
+                <span>#{{ model.rank }}</span>
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</main>
+

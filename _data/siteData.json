@@ -1,70 +1,75 @@
 {
-    "lastUpdated": "2025-05-07",
+    "lastUpdated": "2025-05-08",
     "companies": [
         {
             "id": "company_google",
             "name": "Google",
-            "logoUrl": "assets/google.png"
+            "logoUrl": "assets/logos/google.png"
         },
         {
             "id": "company_openai",
             "name": "OpenAI",
-            "logoUrl": "assets/openai.png"
+            "logoUrl": "assets/logos/openai.png"
         },
         {
             "id": "company_xai",
             "name": "xAI",
-            "logoUrl": "assets/xai.png"
+            "logoUrl": "assets/logos/xai.png"
         },
         {
             "id": "company_anthropic",
             "name": "Anthropic",
-            "logoUrl": "assets/anthropic.png"
+            "logoUrl": "assets/logos/anthropic.png"
         },
         {
             "id": "company_ideogram_ai",
             "name": "Ideogram AI",
-            "logoUrl": "assets/ideogram.png"
+            "logoUrl": "assets/logos/ideogram.png"
         },
         {
             "id": "company_recraft_ai",
             "name": "Recraft AI",
-            "logoUrl": "assets/recraft.png"
+            "logoUrl": "assets/logos/recraft.png"
         },
         {
             "id": "company_kuaishou",
             "name": "Kuaishou",
-            "logoUrl": "assets/kuaishou.png"
+            "logoUrl": "assets/logos/kuaishou.png"
         },
         {
             "id": "company_runwayml",
             "name": "RunwayML",
-            "logoUrl": "assets/runway.png"
+            "logoUrl": "assets/logos/runway.png"
         },
         {
             "id": "company_suno_ai",
             "name": "Suno AI Inc.",
-            "logoUrl": "assets/suno.png"
+            "logoUrl": "assets/logos/suno.png"
         },
         {
             "id": "company_udio",
             "name": "Udio",
-            "logoUrl": "assets/udio.png"
+            "logoUrl": "assets/logos/udio.png"
         },
         {
             "id": "company_elevenlabs",
             "name": "ElevenLabs",
-            "logoUrl": "assets/elevenlabs.svg"
+            "logoUrl": "assets/logos/elevenlabs.svg"
         },
         {
             "id": "company_assemblyai",
             "name": "AssemblyAI",
-            "logoUrl": "assets/assemblyai.png"
+            "logoUrl": "assets/logos/assemblyai.png"
         },
         {
             "id": "company_minimax",
             "name": "Minimax",
-            "logoUrl": "assets/minimax.png"
+            "logoUrl": "assets/logos/minimax.png"
+        },
+        {
+            "id": "company_perplexity",
+            "name": "Perplexity",
+            "logoUrl": "assets/logos/perplexity.png"
         }
     ],
     "categories": [
@@ -77,25 +82,28 @@
                     "rank": 1,
                     "model_name": "Gemini 2.5 Pro",
                     "company_id": "company_google",
-                    "service_link": "https://aistudio.google.com/",
+                    "service_link": "https://gemini.google.com/",
                     "cheapest_option": "Free",
-                    "api_available": true
+                    "api_available": true,
+                    "description": "Google's most capable model, which 'thinks' before answering. This takes usually a few seconds, so it's not the fastest model, but the quality is great. It is free to use with daily limits in the gemini app linked below. However, you can also use it at <a href='https://aistudio.google.com/'>aistudio.google.com</a> with higher limits."
                 },
                 {
                     "rank": 2,
                     "model_name": "OpenAI o3",
                     "company_id": "company_openai",
-                    "service_link": "https://chat.openai.com/",
-                    "cheapest_option": "20$/Monat",
-                    "api_available": true
+                    "service_link": "https://chatgpt.com/",
+                    "cheapest_option": "20$/Month",
+                    "api_available": true,
+                    "description": "About the same level as the gemini 2.5 pro, but it is only available in the paid ChatGPT Plus subscription."
                 },
                 {
                     "rank": 3,
                     "model_name": "Grok 3",
                     "company_id": "company_xai",
                     "service_link": "https://grok.com",
-                    "cheapest_option": "30$/Monat",
-                    "api_available": true
+                    "cheapest_option": "Free",
+                    "api_available": true,
+                    "description": "This model destinguishes itself from the others by having better access to real-time information, fewer restrictions and a more unique personality."
                 },
                 {
                     "rank": 4,
@@ -103,15 +111,17 @@
                     "company_id": "company_anthropic",
                     "service_link": "https://claude.ai/",
                     "cheapest_option": "Free",
-                    "api_available": true
+                    "api_available": true,
+                    "description": "This model is especially good at coding and function calling."
                 },
                 {
                     "rank": 5,
                     "model_name": "GPT-4o",
                     "company_id": "company_openai",
-                    "service_link": "https://chat.openai.com/",
+                    "service_link": "https://chatgpt.com/",
                     "cheapest_option": "Free",
-                    "api_available": true
+                    "api_available": true,
+                    "description": "OpenAI's multimodal model that can process and generate text, audio, and images. It is fast, but a lot worse at most tasks compared to the other models."
                 }
             ]
         },
@@ -133,9 +143,10 @@
                     "rank": 2,
                     "model_name": "Google Imagen 3",
                     "company_id": "company_google",
-                    "service_link": "https://imagefx.google.com/",
-                    "cheapest_option": "$0.03/Einheit",
-                    "api_available": true
+                    "service_link": "https://gemini.google.com/",
+                    "cheapest_option": "Free",
+                    "api_available": true,
+                    "description": "Simply ask Gemini to generate an image based on a text prompt. This model is also available <a href='https://labs.google/fx/tools/image-fx'>here</a> with some additional features, but unfortunately with georestrictions."
                 },
                 {
                     "rank": 3,
@@ -143,7 +154,8 @@
                     "company_id": "company_ideogram_ai",
                     "service_link": "https://ideogram.ai/",
                     "cheapest_option": "Free",
-                    "api_available": true
+                    "api_available": true,
+                    "description": "Excels at professional designs, layouts, logos, etc. but is also great for general images."
                 },
                 {
                     "rank": 4,
@@ -164,23 +176,24 @@
                     "rank": 1,
                     "model_name": "Google Veo 2",
                     "company_id": "company_google",
-                    "service_link": "https://labs.google/videofx",
+                    "service_link": "https://aistudio.google.com/generate-video",
                     "cheapest_option": "Free",
-                    "api_available": true
+                    "api_available": true,
+                    "description": "Currently the best video model out there. It is available in the paid plan of the gemini app, but also for free in aistudio, which is linked below."
                 },
                 {
                     "rank": 2,
                     "model_name": "Kling 2.0",
                     "company_id": "company_kuaishou",
-                    "service_link": "https://klingai.com",
-                    "cheapest_option": "Free",
+                    "service_link": "https://app.klingai.com",
+                    "cheapest_option": "7$/Month",
                     "api_available": true
                 },
                 {
                     "rank": 3,
                     "model_name": "Runway Gen 4",
                     "company_id": "company_runwayml",
-                    "service_link": "https://runwayml.com/",
+                    "service_link": "https://app.runwayml.com/",
                     "cheapest_option": "Free",
                     "api_available": true
                 },
@@ -228,7 +241,8 @@
                     "company_id": "company_google",
                     "service_link": "https://aistudio.google.com/",
                     "cheapest_option": "Free",
-                    "api_available": true
+                    "api_available": true,
+                    "description": "Simply upload your audio file and ask the model to transcribe it. You can also ask for a specific output format, speaker labels, timestamps, etc."
                 },
                 {
                     "rank": 2,
@@ -281,9 +295,70 @@
                     "rank": 4,
                     "model_name": "OpenAI 4o-mini tts",
                     "company_id": "company_openai",
-                    "service_link": "",
+                    "service_link": "https://openai.fm",
                     "cheapest_option": "$0.60/1M Input-Token + $12.00/1M Output-Token",
                     "api_available": true
+                }
+            ]
+        },
+        {
+            "name": "Deep Research",
+            "slug": "deep-research",
+            "description": "Use AI to conduct comprehensive research on a wide range of topics.",
+            "models": [
+                {
+                    "rank": 1,
+                    "model_name": "Deep Research with Gemini 2.5 Pro",
+                    "company_id": "company_google",
+                    "service_link": "https://gemini.google.com/",
+                    "cheapest_option": "20$/Month",
+                    "api_available": false,
+                    "description": "Select the 'Deep Research' option in the model selection dropdown at the top left. After you submitted your prompt, it will make a plan that you have to approve, before an extensive research with rich citations is conducted."
+                },
+                {
+                    "rank": 2,
+                    "model_name": "Deep Research with OpenAI o3",
+                    "company_id": "company_openai",
+                    "service_link": "https://chatgpt.com/",
+                    "cheapest_option": "20$/Month",
+                    "api_available": false,
+                    "description": "Select the 'Deep Research' option in the model selection dropdown at the top left. After you submitted your prompt, you might have to answer some follow-up questions, before an extensive research with rich citations is conducted. This model can also execute code during the research which can be helpful for certain topics."
+                },
+                {
+                    "rank": 3,
+                    "model_name": "Deep Research with gemini flash",
+                    "company_id": "company_google",
+                    "service_link": "https://gemini.google.com/",
+                    "cheapest_option": "Free",
+                    "api_available": false,
+                    "description": "Select the 'Deep Research' option in the model selection dropdown at the top left. After you submitted your prompt, it will make a plan that you have to approve, before an extensive research with rich citations is conducted. The free version will use the less capable gemini flash model, which still creates great results."
+                },
+                {
+                    "rank": 4,
+                    "model_name": "Deep Research with OpenAI 4o-mini",
+                    "company_id": "company_openai",
+                    "service_link": "https://chatgpt.com/",
+                    "cheapest_option": "Free",
+                    "api_available": false,
+                    "description": "Click the 'Deep research' button in the chat-interface before submitting your prompt. After you submitted your prompt, you might have to answer some follow-up questions, before an extensive research with rich citations is conducted. This model can also execute code during the research which can be helpful for certain topics."
+                },
+                {
+                    "rank": 5,
+                    "model_name": "Deep Research with Grok 3",
+                    "company_id": "company_xai",
+                    "service_link": "https://grok.com/",
+                    "cheapest_option": "Free",
+                    "api_available": false,
+                    "description": "Select 'DeeperSearch' before submitting your prompt in the normal chat-interface."
+                },
+                {
+                    "rank": 6,
+                    "model_name": "Deep Research with Perplexity",
+                    "company_id": "company_perplexity",
+                    "service_link": "https://perplexity.ai/",
+                    "cheapest_option": "Free",
+                    "api_available": false,
+                    "description": "Select 'Research' before submitting your prompt in the chat-interface."
                 }
             ]
         }

@@ -1,33 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jorin's AI Picks</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jorin's AI Picks</title>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">Jorin</div>
-            <nav>
-                <a href="#" class="nav-link">Privacy Policy</a>
-                <a href="#" class="nav-link highlight">Terms to Service</a>
-            </nav>
-        </header>
 
-        <main>
-            {{ content | safe }}
-        </main>
+  {{ content | safe }}
 
-        <footer>
-            <p>Last updated: {% formatDate siteData.lastUpdated %}</p>
-        </footer>
-    </div>
+  <footer class="site-footer">
+    <p class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a> | 
+      <a href="/tos.html">Terms of Service</a>
+    </p>
+    <p class="footer-copyright">&copy; 2025 Jorin's AI Picks. All rights reserved.</p>
+  </footer>
 
     <script src="/js/main.js"></script>
 </body>
+
 </html>

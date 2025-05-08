@@ -1,29 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Get all tab buttons and tab panes
+    // Tab switching functionality
     const tabButtons = document.querySelectorAll(".tab-button")
-    const tabPanes = document.querySelectorAll(".tab-pane")
+    const tabContents = document.querySelectorAll(".tab-content")
   
-    // Set the first tab as active by default
-    if (tabButtons.length > 0 && tabPanes.length > 0) {
-      tabButtons[0].classList.add("active")
-      tabPanes[0].classList.add("active")
-    }
-  
-    // Add click event listeners to tab buttons
     tabButtons.forEach((button) => {
-      button.addEventListener("click", function () {
-        // Remove active class from all buttons and panes
-        tabButtons.forEach((btn) => btn.classList.remove("active"))
-        tabPanes.forEach((pane) => pane.classList.remove("active"))
+      button.addEventListener("click", () => {
+        // Update button states
+        tabButtons.forEach((btn) => btn.setAttribute("aria-selected", "false"))
+        button.setAttribute("aria-selected", "true")
   
-        // Add active class to clicked button
-        this.classList.add("active")
-  
-        // Get the tab ID from data attribute
-        const tabId = this.getAttribute("data-tab")
-  
-        // Add active class to corresponding tab pane
-        document.getElementById(tabId).classList.add("active")
+        // Show the selected tab content, hide others
+        const tabId = button.getAttribute("data-tab")
+        tabContents.forEach((content) => {
+          if (content.id === tabId) {
+            content.style.display = "block"
+          } else {
+            content.style.display = "none"
+          }
+        })
       })
     })
   })

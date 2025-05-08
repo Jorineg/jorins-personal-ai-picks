@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+- vercel hosting, everything default
+
+- no analytics, tracking, data collection, etc. from my side (I don't know if vercel does anything automatically???)

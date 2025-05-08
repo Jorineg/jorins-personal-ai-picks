@@ -1,0 +1,57 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Project description
+
+**Project Goal:**
+Create a simple, fast, and easy-to-maintain single-page website that lists and provides information about AI models across various categories, primarily for consumers.
+
+**I. Core Technology & Hosting Stack:**
+
+- **Content Source:** Data managed in a JSON file
+- **Static Site Generator (SSG):** **Eleventy (11ty)**
+    - To process the JSON data and generate static HTML.
+    - Will enable dynamic creation of category tabs and content from the JSON.
+- **Website Structure:** Single HTML page.
+    - Content organized into **tabs** for different AI categories.
+    - Tab switching will be handled by client-side JavaScript for speed.
+
+**II. Content & Features:**
+
+- **Main Data File (`siteData.json`):**
+    - **`lastUpdated`:** Manual date field (e.g., "2025-05-07").
+    - **`companies` Array:**
+        - `id` (string, e.g., "company_openai")
+        - `name` (string, e.g., "OpenAI")
+        - `logoUrl` (string, path to locally hosted logo, e.g., "/assets/logos/openai.svg")
+    - **`categories` Array:** Each category object will contain:
+        - `name` (string, for tab display, e.g., "AI Chat Models")
+        - `slug` (string, for HTML IDs, e.g., "ai-chat-models")
+        - `description` (string, optional text for the category)
+        - `models` Array: Each model object will contain:
+            - `rank` (number, e.g., 1, 2, 3)
+            - `model_name` (string, e.g., "GPT-4o")
+            - `company_id` (string, referencing `id` in the `companies` array)
+            - `service_link` (string, URL to the AI service)
+            - `cheapest_option` (string, e.g., "Free", "$10/month", "API Credits")
+            - `api_available` (boolean, true/false)
+            - `description` for a short model description
+- **Consumer Categories (Auto generation from file):**
+    - AI chat models
+    - Image generation
+    - Video generation
+    - Music generation
+    - Audio transcription
+    - Text to speech
+- **Visuals:**
+    - Company logos (linked from the `companies` data, hosted locally).
+    - Rank icons for ranks 1, 2, 3 (e.g., gold, silver, bronze - likely SVGs or small image files).
+    - Coin/cash icon for pricing information (SVG or small image file).
+- **Functionality:**
+    - Dynamic generation of category tabs and model listings from the JSON data.
+    - Client-side JavaScript for tab switching (show/hide content panes).
+- **Design:** Simple, clean, friendly:
+
+This design is for a single-page website offering Jorin's personal AI tool recommendations, aimed at being easy for people less familiar with AI to understand. The screen shows a light, approachable, and friendly interface with an off-white or very light cream background. The 'Text to Speech' tab is currently selected, highlighted with a soft, pastel orange background color. Other available tabs like 'AI Chat Models', 'Image Generation', and 'Audio Transcription' are visible with simple text labels. Just below the tabs, a short, welcoming sentence reads: "Jorin's personal picks for helpful AI tools." The listed text-to-speech models appear in clearly separated sections or cards. The 'ElevenLabs Speech Synthesis' model entry features the ElevenLabs logo, the model name, 'Cheapest Option: Free tier, then subscription from $5/month' next to a cute, simple piggy bank icon, and a bronze-colored ribbon icon for its rank. The typography is a clear, rounded sans-serif, giving it an inviting and easy-to-read quality.

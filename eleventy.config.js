@@ -1,25 +1,20 @@
-module.exports = function (eleventyConfig) {
-    // Pass through copy for assets
-    eleventyConfig.addPassthroughCopy("css");
-    eleventyConfig.addPassthroughCopy("js");
-    eleventyConfig.addPassthroughCopy("assets");
+module.exports = (eleventyConfig) => {
+    // Add a filter to get company by ID
+    eleventyConfig.addFilter("getCompanyById", (companies, companyId) =>
+        companies.find((company) => company.id === companyId),
+    )
 
-    // Add filter to get company by ID
-    eleventyConfig.addFilter("getCompanyById", function (companies, companyId) {
-        return companies.find(company => company.id === companyId);
-    });
+    // Pass through static assets
+    eleventyConfig.addPassthroughCopy("assets")
+    eleventyConfig.addPassthroughCopy("css")
+    eleventyConfig.addPassthroughCopy("js")
 
-    // Add a shortcode for formatting dates
-    eleventyConfig.addShortcode("formatDate", (dateString) => {
-        const date = new Date(dateString)
-        return date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
-    })
 
     return {
         dir: {
             input: ".",
+            includes: "_includes",
             output: "_site",
-            includes: "_includes"
-        }
-    };
-};
+        },
+    }
+}
