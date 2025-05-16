@@ -21,7 +21,6 @@ Create a simple, fast, and easy-to-maintain single-page website that lists and p
 **II. Content & Features:**
 
 - **Main Data File (`siteData.json`):**
-    - **`lastUpdated`:** Manual date field (e.g., "2025-05-07").
     - **`companies` Array:**
         - `id` (string, e.g., "company_openai")
         - `name` (string, e.g., "OpenAI")

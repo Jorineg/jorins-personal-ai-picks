@@ -4,7 +4,7 @@ layout: base.njk
 
 <main class="container">
   <h1 class="site-title">Jorin's personal picks<br>for helpful AI tools</h1>
-  <p class="last-updated">Last updated: {{ siteData.lastUpdated }}</p>
+  <p class="last-updated">Last updated: {{ build.formattedDate }}</p>
 
   <div class="tabs">
     {% for category in siteData.categories %}

@@ -1,6 +1,10 @@
 {
-    "lastUpdated": "2025-05-08",
     "companies": [
+        {
+            "id": "company_bytedance",
+            "name": "ByteDance",
+            "logoUrl": "assets/logos/bytedance.png"
+        },
         {
             "id": "company_google",
             "name": "Google",
@@ -164,6 +168,14 @@
                     "service_link": "https://www.recraft.ai/",
                     "cheapest_option": "Free",
                     "api_available": true
+                },
+                {
+                    "rank": 5,
+                    "model_name": "Seedream 3.0",
+                    "company_id": "company_bytedance",
+                    "service_link": "https://dreamina.capcut.com/ai-tool/image/generate",
+                    "cheapest_option": "Free",
+                    "api_available": false
                 }
             ]
         },
