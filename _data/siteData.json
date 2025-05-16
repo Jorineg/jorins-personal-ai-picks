@@ -146,7 +146,7 @@
                     "service_link": "https://gemini.google.com/",
                     "cheapest_option": "Free",
                     "api_available": true,
-                    "description": "Simply ask Gemini to generate an image based on a text prompt. This model is also available <a href='https://labs.google/fx/tools/image-fx'>here</a> with some additional features, but unfortunately with georestrictions."
+                    "description": "Simply ask Gemini to generate an image based on a text prompt. This model is also available <a href='https://aistudio.google.com/generate-image'>here</a> with some additional features."
                 },
                 {
                     "rank": 3,
