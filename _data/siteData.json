@@ -145,16 +145,16 @@
                 },
                 {
                     "rank": 2,
-                    "model_name": "Google Imagen 3",
+                    "model_name": "Google Imagen 4",
                     "company_id": "company_google",
                     "service_link": "https://gemini.google.com/",
-                    "cheapest_option": "Free",
-                    "api_available": true,
-                    "description": "Simply ask Gemini to generate an image based on a text prompt. This model is also available <a href='https://aistudio.google.com/generate-image'>here</a> with some additional features."
+                    "cheapest_option": "125$/Month",
+                    "api_available": false,
+                    "description": "This model is only available in the Gemini Ultra subscription."
                 },
                 {
                     "rank": 3,
-                    "model_name": "Ideogram 3",
+                    "model_name": "Ideogram V3",
                     "company_id": "company_ideogram_ai",
                     "service_link": "https://ideogram.ai/",
                     "cheapest_option": "Free",
@@ -163,11 +163,12 @@
                 },
                 {
                     "rank": 4,
-                    "model_name": "Recraft v3",
-                    "company_id": "company_recraft_ai",
-                    "service_link": "https://www.recraft.ai/",
+                    "model_name": "Google Imagen 3",
+                    "company_id": "company_google",
+                    "service_link": "https://gemini.google.com/",
                     "cheapest_option": "Free",
-                    "api_available": true
+                    "api_available": true,
+                    "description": "Simply ask Gemini to generate an image based on a text prompt. This model is also available <a href='https://aistudio.google.com/generate-image'>here</a> with some additional features."
                 },
                 {
                     "rank": 5,
@@ -176,6 +177,14 @@
                     "service_link": "https://dreamina.capcut.com/ai-tool/image/generate",
                     "cheapest_option": "Free",
                     "api_available": false
+                },
+                {
+                    "rank": 6,
+                    "model_name": "Recraft v3",
+                    "company_id": "company_recraft_ai",
+                    "service_link": "https://www.recraft.ai/",
+                    "cheapest_option": "Free",
+                    "api_available": true
                 }
             ]
         },
