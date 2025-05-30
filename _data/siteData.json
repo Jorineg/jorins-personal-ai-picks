@@ -84,15 +84,6 @@
             "models": [
                 {
                     "rank": 1,
-                    "model_name": "Gemini 2.5 Pro",
-                    "company_id": "company_google",
-                    "service_link": "https://gemini.google.com/",
-                    "cheapest_option": "Free",
-                    "api_available": true,
-                    "description": "Google's most capable model, which 'thinks' before answering. This takes usually a few seconds, so it's not the fastest model, but the quality is great. It is free to use with daily limits in the gemini app linked below. However, you can also use it at <a href='https://aistudio.google.com/'>aistudio.google.com</a> with higher limits."
-                },
-                {
-                    "rank": 2,
                     "model_name": "OpenAI o3",
                     "company_id": "company_openai",
                     "service_link": "https://chatgpt.com/",
@@ -101,17 +92,26 @@
                     "description": "About the same level as the gemini 2.5 pro, but it is only available in the paid ChatGPT Plus subscription."
                 },
                 {
-                    "rank": 3,
-                    "model_name": "Grok 3",
-                    "company_id": "company_xai",
-                    "service_link": "https://grok.com",
+                    "rank": 2,
+                    "model_name": "Gemini 2.5 Pro",
+                    "company_id": "company_google",
+                    "service_link": "https://gemini.google.com/",
                     "cheapest_option": "Free",
                     "api_available": true,
-                    "description": "This model destinguishes itself from the others by having better access to real-time information, fewer restrictions and a more unique personality."
+                    "description": "Google's most capable model, which 'thinks' before answering. This takes usually a few seconds, so it's not the fastest model, but the quality is great. It is free to use with daily limits in the gemini app linked below. However, you can also use it at <a href='https://aistudio.google.com/'>aistudio.google.com</a> with higher limits."
+                },
+                {
+                    "rank": 3,
+                    "model_name": "Claude 4 Opus",
+                    "company_id": "company_anthropic",
+                    "service_link": "https://claude.ai/",
+                    "cheapest_option": "20$/Month",
+                    "api_available": true,
+                    "description": "This model is especially good at coding and function calling."
                 },
                 {
                     "rank": 4,
-                    "model_name": "Claude 3.7 Sonnet",
+                    "model_name": "Claude 4 Sonnet",
                     "company_id": "company_anthropic",
                     "service_link": "https://claude.ai/",
                     "cheapest_option": "Free",
@@ -120,6 +120,15 @@
                 },
                 {
                     "rank": 5,
+                    "model_name": "Grok 3",
+                    "company_id": "company_xai",
+                    "service_link": "https://grok.com",
+                    "cheapest_option": "Free",
+                    "api_available": true,
+                    "description": "This model destinguishes itself from the others by having better access to real-time information, fewer restrictions and a more unique personality."
+                },
+                {
+                    "rank": 6,
                     "model_name": "GPT-4o",
                     "company_id": "company_openai",
                     "service_link": "https://chatgpt.com/",
@@ -136,21 +145,21 @@
             "models": [
                 {
                     "rank": 1,
-                    "model_name": "ChatGPT Image Model",
-                    "company_id": "company_openai",
-                    "service_link": "https://chat.openai.com/",
-                    "cheapest_option": "Free",
-                    "api_available": true,
-                    "description": "This model is super great at following instructions and rendering text in images. You use it by simply asking ChatGPT to generate an image based on a text prompt."
-                },
-                {
-                    "rank": 2,
                     "model_name": "Google Imagen 4",
                     "company_id": "company_google",
                     "service_link": "https://gemini.google.com/",
                     "cheapest_option": "125$/Month",
                     "api_available": false,
                     "description": "This model is only available in the Gemini Ultra subscription."
+                },
+                {
+                    "rank": 2,
+                    "model_name": "ChatGPT Image Model",
+                    "company_id": "company_openai",
+                    "service_link": "https://chat.openai.com/",
+                    "cheapest_option": "Free",
+                    "api_available": true,
+                    "description": "This model is super great at following instructions and rendering text in images. You use it by simply asking ChatGPT to generate an image based on a text prompt."
                 },
                 {
                     "rank": 3,
@@ -195,15 +204,32 @@
             "models": [
                 {
                     "rank": 1,
+                    "model_name": "Google Veo 3",
+                    "company_id": "company_google",
+                    "service_link": "https://aistudio.google.com/generate-video",
+                    "cheapest_option": "20$/Month",
+                    "api_available": false,
+                    "description": "This model also generates audio with the video. It is great at dialogue (with excellent lip-syncing), background music, noise, etc. It is only available in the paid plan of the gemini app in some regions."
+                },
+                {
+                    "rank": 2,
+                    "model_name": "Kling 2.1",
+                    "company_id": "company_kuaishou",
+                    "service_link": "https://app.klingai.com",
+                    "cheapest_option": "free",
+                    "api_available": true
+                },
+                {
+                    "rank": 3,
                     "model_name": "Google Veo 2",
                     "company_id": "company_google",
                     "service_link": "https://aistudio.google.com/generate-video",
                     "cheapest_option": "Free",
                     "api_available": true,
-                    "description": "Currently the best video model out there. It is available in the paid plan of the gemini app, but also for free in aistudio, which is linked below."
+                    "description": "This model is available in the paid plan of the gemini app, but also for free in aistudio, which is linked below."
                 },
                 {
-                    "rank": 2,
+                    "rank": 4,
                     "model_name": "Kling 2.0",
                     "company_id": "company_kuaishou",
                     "service_link": "https://app.klingai.com",
@@ -211,7 +237,7 @@
                     "api_available": true
                 },
                 {
-                    "rank": 3,
+                    "rank": 5,
                     "model_name": "Runway Gen 4",
                     "company_id": "company_runwayml",
                     "service_link": "https://app.runwayml.com/",
@@ -219,7 +245,7 @@
                     "api_available": true
                 },
                 {
-                    "rank": 4,
+                    "rank": 6,
                     "model_name": "Sora",
                     "company_id": "company_openai",
                     "service_link": "https://chat.openai.com/",
