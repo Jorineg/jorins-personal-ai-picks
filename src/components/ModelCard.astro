@@ -1,0 +1,70 @@
+---
+import { urlFor } from '../lib/sanity';
+
+interface Props {
+    model: {
+        rank: number;
+        modelName: string;
+        description?: string;
+        serviceLink?: string;
+        cheapestOption?: string;
+        apiAvailable?: boolean;
+        company?: {
+            name: string;
+            logo?: any;
+        };
+    };
+}
+
+const { model } = Astro.props;
+---
+
+<a 
+    href={model.serviceLink || '#'} 
+    target="_blank" 
+    rel="noopener noreferrer"
+    class="block bg-dark rounded-xl p-6 hover:bg-slate-800 transition-all duration-300 border border-slate-700 hover:border-primary group"
+>
+    <div class="flex items-start gap-4">
+        {model.rank <= 3 && (
+            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center font-bold text-sm">
+                #{model.rank}
+            </div>
+        )}
+        {model.rank > 3 && (
+            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center font-bold text-sm text-slate-400">
+                #{model.rank}
+            </div>
+        )}
+        
+        <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 mb-1">
+                {model.company?.logo && (
+                    <img 
+                        src={urlFor(model.company.logo).width(24).height(24).url()} 
+                        alt={model.company.name}
+                        class="w-6 h-6 rounded"
+                    />
+                )}
+                <span class="text-sm text-slate-400">{model.company?.name}</span>
+            </div>
+            
+            <h3 class="text-lg font-semibold text-white group-hover:text-primary transition-colors">
+                {model.modelName}
+            </h3>
+            
+            {model.description && (
+                <p class="text-slate-400 text-sm mt-2 line-clamp-3" set:html={model.description}></p>
+            )}
+            
+            <div class="flex items-center gap-4 mt-3 text-sm">
+                {model.cheapestOption && (
+                    <span class="text-green-400">{model.cheapestOption}</span>
+                )}
+                {model.apiAvailable && (
+                    <span class="text-blue-400">API Available</span>
+                )}
+            </div>
+        </div>
+    </div>
+</a>

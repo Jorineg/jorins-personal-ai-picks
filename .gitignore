@@ -1,3 +1,29 @@
-node_modules
-_site
-package-lock.json
+# Dependencies
+node_modules/
+sanity/node_modules/
+
+# Build output
+dist/
+.vercel/
+sanity/dist/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Astro
+.astro/

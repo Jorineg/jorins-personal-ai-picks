@@ -1,0 +1,28 @@
+---
+interface Props {
+    categories?: { name: string; slug: { current: string } }[];
+}
+
+const { categories = [] } = Astro.props;
+---
+
+<header class="sticky top-0 z-50 bg-darker/80 backdrop-blur-lg border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Jorin's AI Picks
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-6">
+                {categories.map((cat) => (
+                    <a 
+                        href={`#${cat.slug?.current}`} 
+                        class="text-slate-400 hover:text-white transition-colors text-sm"
+                    >
+                        {cat.name}
+                    </a>
+                ))}
+            </nav>
+        </div>
+    </div>
+</header>
