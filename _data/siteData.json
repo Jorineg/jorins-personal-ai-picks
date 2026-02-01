@@ -26,6 +26,11 @@
             "logoUrl": "assets/logos/anthropic.png"
         },
         {
+            "id": "company_qwen",
+            "name": "Qwen",
+            "logoUrl": "assets/logos/qwen.png"
+        },
+        {
             "id": "company_ideogram_ai",
             "name": "Ideogram AI",
             "logoUrl": "assets/logos/ideogram.png"
@@ -84,12 +89,12 @@
             "models": [
                 {
                     "rank": 1,
-                    "model_name": "OpenAI o3",
+                    "model_name": "GPT-5",
                     "company_id": "company_openai",
                     "service_link": "https://chatgpt.com/",
-                    "cheapest_option": "20$/Month",
+                    "cheapest_option": "Free",
                     "api_available": true,
-                    "description": "About the same level as the gemini 2.5 pro, but it is only available in the paid ChatGPT Plus subscription."
+                    "description": "OpenAI's new model with a router that automatically decides whether it should use reasoning or not. Siginificantly improved for coding tasks compared previous OpenAi models."
                 },
                 {
                     "rank": 2,
@@ -102,25 +107,16 @@
                 },
                 {
                     "rank": 3,
-                    "model_name": "Claude 4 Opus",
-                    "company_id": "company_anthropic",
-                    "service_link": "https://claude.ai/",
-                    "cheapest_option": "20$/Month",
-                    "api_available": true,
-                    "description": "This model is especially good at coding and function calling."
-                },
-                {
-                    "rank": 4,
-                    "model_name": "Claude 4 Sonnet",
+                    "model_name": "Claude Opus 4.1",
                     "company_id": "company_anthropic",
                     "service_link": "https://claude.ai/",
                     "cheapest_option": "Free",
                     "api_available": true,
-                    "description": "This model is especially good at coding and function calling."
+                    "description": "Only very few free credits available. 20$/Month for more usage. This model is especially good at coding and function calling."
                 },
                 {
-                    "rank": 5,
-                    "model_name": "Grok 3",
+                    "rank": 4,
+                    "model_name": "Grok 4",
                     "company_id": "company_xai",
                     "service_link": "https://grok.com",
                     "cheapest_option": "Free",
@@ -128,13 +124,22 @@
                     "description": "This model destinguishes itself from the others by having better access to real-time information, fewer restrictions and a more unique personality."
                 },
                 {
-                    "rank": 6,
-                    "model_name": "GPT-4o",
-                    "company_id": "company_openai",
-                    "service_link": "https://chatgpt.com/",
+                    "rank": 5,
+                    "model_name": "Qwen3 235B 2507",
+                    "company_id": "company_qwen",
+                    "service_link": "https://chat.qwen.ai/",
                     "cheapest_option": "Free",
                     "api_available": true,
-                    "description": "OpenAI's multimodal model that can process and generate text, audio, and images. It is fast, but a lot worse at most tasks compared to the other models."
+                    "description": "One of the best open-weight models currently available. Developed by the Alibaba group."
+                },
+                {
+                    "rank": 6,
+                    "model_name": "DeepSeek V3.1",
+                    "company_id": "company_deepseek_ai",
+                    "service_link": "https://deepseek.com/",
+                    "cheapest_option": "Free",
+                    "api_available": true,
+                    "description": "Developed by the Alibaba group."
                 }
             ]
         },
